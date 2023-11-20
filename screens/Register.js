@@ -1,5 +1,7 @@
+import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
+import { Pressable } from "react-native";
 import { View, Text, TouchableOpacity, Image, FlatList } from "react-native";
 
 const arr = [
@@ -37,13 +39,27 @@ function Register(props) {
     <View
       style={{ flex: 1, justifyContent: "center", backgroundColor: "#ffff" }}
     >
+      <Pressable
+        style={{ backgroundColor: "#1faeeb", flexDirection: "row" }}
+        onPress={() => {
+          navigation.goBack("Home");
+        }}
+      >
+        <AntDesign
+          name="arrowleft"
+          size={30}
+          color="white"
+          style={{ marginRight: 330 }}
+        />
+      </Pressable>
+
       <View
         style={{
           flex: 1,
           width: "390px",
-          height: "10px",
-          padding: 5,
-          backgroundColor: "gray",
+          height: "1px",
+          justifyContent: "center",
+          backgroundColor: "#d9d9d9",
         }}
       >
         <Text
@@ -58,13 +74,12 @@ function Register(props) {
           Vui lòng nhập số điện thoại và mật khẩu đăng nhập
         </Text>
       </View>
-      <View style={{ flex: 8, backgroundColor: "#ffff" }}>
+      <View style={{ flex: 9, backgroundColor: "#ffff" }}>
         <TouchableOpacity
           style={{
             width: "20%",
             height: 50,
-            borderRadius: "5px",
-            borderWidth: "1px",
+            borderBottomWidth:"1px",
             justifyContent: "center",
             alignItems: "center",
             marginLeft: 10,
@@ -133,26 +148,32 @@ function Register(props) {
           flexDirection: "column",
         }}
       >
-        <View>
-          {" "}
+        <View style={{flexDirection:"row",justifyContent:"space-between"}}>
+          <View  style={{marginLeft:5}}>
           <Text
             style={{ fontWeight: "500", marginBottom: 5, fontSize: "15px" }}
           >
             Tiếp tục nghĩa là bạn đồng ý với các
-            <Image
-              source={require("../assets/next.png")}
-              style={{
-                width: "20px",
-                height: "20px",
-                marginLeft: 300,
-              }}
-              onPress={() => props.navigation.navigate("Create Account2")}
-            ></Image>
           </Text>
           <Text style={{ color: "#1FAEEB", fontSize: "14px", fontSize: "500" }}>
             điều khoản sử dụng Zalo
           </Text>
         </View>
+        <Pressable
+        style={{ backgroundColor: "#ffff", flexDirection: "row" }}
+        onPress={() => {
+          navigation.navigate("CreateAccount");
+        }}
+      >
+        <AntDesign
+          name="rightcircle"
+          size={25}
+          color="#1faeeb"
+          style={{ marginRight: 20,alignItems:"center" }}
+        />
+      </Pressable>
+        </View>
+        
       </View>
     </View>
   );

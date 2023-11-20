@@ -1,11 +1,13 @@
+import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 function Login(props) {
   const [text, onChangeText] = React.useState("");
   const [phone, onChangePhone] = React.useState("");
   const navigation = useNavigation();
+  
   return (
     <View
       style={{
@@ -15,6 +17,13 @@ function Login(props) {
         flex: 1,
       }}
     >
+      <Pressable
+                   onPress={()=>{
+                    navigation.goBack('Home')  // quay trở về trang trước đó
+       }}
+                >
+                    <AntDesign name="arrowleft" size={30} color="black" style={{marginRight:330}} />
+                </Pressable>
       <View style={{ flex: 1 }}></View>
       <View
         style={{
@@ -59,6 +68,7 @@ function Login(props) {
           onChangeText={onChangePhone}
           value={phone}
           placeholder="Số điện thoại"
+          autoFocus={true}
         ></TextInput>
 
         <TextInput
@@ -86,7 +96,7 @@ function Login(props) {
             backgroundColor: "#0091ff",
             alignSelf: "center",
           }}
-          onPress={() => props.navigation.navigate("Detail1")}
+          onPress={() => props.navigation.navigate("ListChat")}
         >
           <Text
             style={{

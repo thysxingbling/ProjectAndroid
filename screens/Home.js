@@ -20,7 +20,7 @@ const Home = (props) => {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => props.navigation.navigate("Create account")}
+          onPress={() => props.navigation.navigate("Register")}
         >
           <Text style={styles.text_register}>Đăng ký</Text>
         </TouchableOpacity>
@@ -33,4 +33,4 @@ const Home = (props) => {
     </View>
   );
 };
-export default Home;
+export default Home
