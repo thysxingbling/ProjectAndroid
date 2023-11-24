@@ -136,7 +136,7 @@ import { UserSwitchOutlined , RightOutlined
                         <View style={styles.view_qrt}>
                             <TouchableOpacity style={styles.btn_qrt}>
                             <QuestionCircleOutlined  style={{fontSize:'30px',color:'#129EFD',marginTop:5}}/>
-                                <Text  style={ {fontWeight:500 , fontSize:18 , marginLeft:15}}>Liên hệ hổ trợ</Text>
+                                <Text  style={ {fontWeight:500 , fontSize:18 , marginLeft:15}}>Liên hệ hỗ trợ</Text>
                                 <RightOutlined  style={{marginLeft:169 , marginTop:15}}/>
                             </TouchableOpacity>
                         </View>

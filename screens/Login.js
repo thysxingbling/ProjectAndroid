@@ -7,7 +7,6 @@ function Login(props) {
   const [text, onChangeText] = React.useState("");
   const [phone, onChangePhone] = React.useState("");
   const navigation = useNavigation();
-  
   return (
     <View
       style={{
@@ -19,7 +18,7 @@ function Login(props) {
     >
       <Pressable
                    onPress={()=>{
-                    navigation.goBack('Home')  // quay trở về trang trước đó
+                    navigation.goBack('Home') 
        }}
                 >
                     <AntDesign name="arrowleft" size={30} color="black" style={{marginRight:330}} />

@@ -16,7 +16,6 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { useState, useEffect } from "react";
-import { Pressable } from "react-native";
 import { Image } from "react-native";
 import { ScrollView } from "react-native";
 
@@ -24,7 +23,7 @@ const ListChat = ({ navigation }) => {
   var [data, setData] = useState([]);
   var fc = () => {
     const url = "https://6554d45e63cafc694fe70d65.mockapi.io/api/user";
-    fetch(url)
+    fetch("https://6554d45e63cafc694fe70d65.mockapi.io/api/user")
       .then((response) => response.json())
       .then((json) => {
         data = json;
@@ -39,7 +38,6 @@ const ListChat = ({ navigation }) => {
         flex: 1,
         flexDirection: "column",
       }}
-
     >
       {/* header */}
       <View

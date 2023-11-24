@@ -12,10 +12,8 @@ import {
    } from 'react-native';
 import { TextInput } from 'react-native-paper';
           
-import {MessageOutlined,UserOutlined ,
-        IdcardOutlined,SearchOutlined,SettingOutlined,UserAddOutlined,
-        AppstoreOutlined,ClockCircleOutlined,ContactsOutlined,UsergroupAddOutlined, GroupOutlined,
-        PhoneOutlined,VideoCameraOutlined,PictureOutlined,NotificationOutlined,VideoCameraAddOutlined,
+import {MessageOutlined,UserOutlined,SearchOutlined,
+        AppstoreOutlined,ClockCircleOutlined,ContactsOutlined,VideoCameraOutlined,PictureOutlined,NotificationOutlined,
         FolderAddOutlined,HeartOutlined,CommentOutlined,EllipsisOutlined} from '@ant-design/icons';
 import {useEffect,useState} from 'react';
 var data =[] ;
@@ -23,7 +21,7 @@ var url = "https://654da848cbc325355741c2bd.mockapi.io/phoneBook";
 
    const Diary = ({navigation})=>{
     var [data , setData] = useState([]);
-    var fc = () => {
+    var getList = () => {
         fetch(url)
         .then((response) => response.json())
         .then((json) =>{
@@ -31,7 +29,7 @@ var url = "https://654da848cbc325355741c2bd.mockapi.io/phoneBook";
             setData(data);
         });
     };
- useEffect(fc,[]);
+ useEffect(getList,[]);
         return(
             <SafeAreaView style={styles.container}>
                 <View style={styles.header}>
@@ -73,19 +71,19 @@ var url = "https://654da848cbc325355741c2bd.mockapi.io/phoneBook";
                         width:'50px',
                         height:'50px',
                     }}
-                    source={require('../assets/Avatar.png')}/>
+                    source={require('../assets/avatar.png')}/>
                 <Text style={{
                     fontSize:'16px',
                     marginLeft:'10px',
                 }}>Hôm nay bạn thấy thế nào ?</Text>
                 </TouchableOpacity>
-                {/* btn đăng ảnh - đăng video - Tạo album */}
+               
               <View style={{
                 flexDirection : 'row',
                 justifyContent:'space-around',
                 marginTop:'10px',
               }}>
-              {/* Đăng ảnh */}
+            
 
                 <TouchableOpacity style={{
                     backgroundColor:'#ededed',

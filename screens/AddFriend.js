@@ -29,7 +29,7 @@ const AddFriend = ({navigation}) => {
           borderBottomWidth: 0.1,
         }}
       >
-        <Pressable
+        <TouchableOpacity
           style={{ flexDirection: "row", justifyContent: "space-between" }}
           onPress={() => {
             navigation.goBack("Contact");
@@ -41,7 +41,7 @@ const AddFriend = ({navigation}) => {
             color="black"
             style={{ marginLeft: 5 }}
           ></AntDesign>
-        </Pressable>
+        </TouchableOpacity>
         <Text
           style={{
             fontSize: 18,
@@ -84,7 +84,7 @@ const AddFriend = ({navigation}) => {
               marginBottom: 15,
             }}
           >
-            Thu Thúy
+           Hello world
           </Text>
           <View
             style={{
@@ -183,7 +183,7 @@ const AddFriend = ({navigation}) => {
             />
             <View style={{ marginLeft: 15 }}>
               <Text style={{ fontWeight: 500, fontSize: 18 }}>
-                Bạn bè có thể quen
+               Bạn bè có thể quen
               </Text>
             </View>
           </TouchableOpacity>
