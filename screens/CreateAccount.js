@@ -21,8 +21,6 @@ export const CreateAccount = ({ navigation }) => {
           color="white"
           style={{ marginRight: 330 }}
         >
-       
-        
          </AntDesign>
           
       </Pressable>

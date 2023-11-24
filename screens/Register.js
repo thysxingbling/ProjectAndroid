@@ -3,7 +3,7 @@ import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import { Pressable } from "react-native";
 import { View, Text, TouchableOpacity, Image, FlatList , TextInput} from "react-native";
-import{CheckSquareOutlined} from '@ant-design/icons'
+
 
 const arr = [
   {
@@ -32,8 +32,8 @@ const arr = [
   },
 ];
 function Register(props) {
-  const [selected, setSelected] = useState("Select");
-  const [isClicked, setIsClicked] = useState(false);
+  // const [selected, setSelected] = useState("Select");
+  // const [isClicked, setIsClicked] = useState(false);
   const [data, setData] = useState(arr);
   var navigation = useNavigation();
   return (
