@@ -1,16 +1,14 @@
 import * as React from 'react' ;
 import { 
-    SafeAreaView,
     View,
     Text,
-    Image,
     TouchableOpacity,
     StyleSheet,
     FlatList,
     ScrollView,
    } from 'react-native';
-import { SettingOutlined , UserSwitchOutlined ,CustomerServiceTwoTone , RightOutlined  
-    ,SearchOutlined, LockOutlined ,PieChartOutlined,CloudOutlined ,QrcodeOutlined,AppstoreOutlined,MessageOutlined,
+import { UserSwitchOutlined , RightOutlined  
+    ,SearchOutlined, LockOutlined ,PieChartOutlined,CloudOutlined ,AppstoreOutlined,MessageOutlined,
     ContactsOutlined,UserOutlined,ClockCircleOutlined,PropertySafetyOutlined,SoundOutlined,PhoneOutlined,ToolOutlined,InfoCircleOutlined
      ,QuestionCircleOutlined,LogoutOutlined,ArrowLeftOutlined} from '@ant-design/icons';
 
@@ -177,7 +175,7 @@ import { SettingOutlined , UserSwitchOutlined ,CustomerServiceTwoTone , RightOut
                
                     <View
         style={{
-          backgroundColor: "#faefef",
+          backgroundColor: "white",
           justifyContent: "space-around",
           flexDirection: "row",
           alignItems:'center',
@@ -188,7 +186,7 @@ import { SettingOutlined , UserSwitchOutlined ,CustomerServiceTwoTone , RightOut
           <MessageOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Phonebook')}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Contact')}>
 <ContactsOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 
@@ -200,7 +198,7 @@ import { SettingOutlined , UserSwitchOutlined ,CustomerServiceTwoTone , RightOut
           <ClockCircleOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 
-        <TouchableOpacity  onPress={()=>navigation.navigate('information')}>
+        <TouchableOpacity  onPress={()=>navigation.navigate('Profile')}>
           <UserOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
       </View>    

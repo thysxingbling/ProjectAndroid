@@ -107,7 +107,7 @@ var url =  "https://6554d45e63cafc694fe70d65.mockapi.io/api/phoneBooks";
                             </Text>
                         </TouchableOpacity>
                   </View>
-                  {/* lo*/}
+           
                   <View style={{
                     flex:2,
                   }}>
