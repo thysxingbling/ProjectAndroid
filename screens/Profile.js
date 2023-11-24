@@ -38,7 +38,7 @@ import { AntDesign} from '@expo/vector-icons';
                                 <View style={styles.view_avt}>
                                 <Text style={{fontWeight:500}}>
                                     Avatar  
-                                    {/* su dung api de load ten */}
+                                  
                                 </Text>
                                 <Text style={{color:'grey' , fontWeight:500 , marginTop:1}}>
                                     Xem trang cá nhân 

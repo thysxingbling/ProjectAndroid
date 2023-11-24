@@ -24,7 +24,7 @@ export const Chat = ({ navigation, route }) => {
         let infodata = json.find((item) => item.name === name);
         if (infodata) setData(json.find((item) => item.name === name) || {});
         else {
-          // debugger
+       
           fetch("https://6554d45e63cafc694fe70d65.mockapi.io/api/user",
            {
             method: "POST",
@@ -38,7 +38,7 @@ export const Chat = ({ navigation, route }) => {
           })
             .then((response) => response.json())
             .then((json) => setData(json));
-            // console.log(data);
+            console.log(data);
         }
       });
   }, []);

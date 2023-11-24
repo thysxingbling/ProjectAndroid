@@ -137,7 +137,7 @@ var url = "https://654da848cbc325355741c2bd.mockapi.io/phoneBook";
                 </TouchableOpacity>
               </View>
                 </View>
-                {/* Khoảng khắc */}
+         
                 <View style={{
                     backgroundColor:'#ffffff',
                     padding:'10px',
