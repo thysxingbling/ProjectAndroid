@@ -5,7 +5,7 @@ import { Image } from "react-native";
 import { Pressable } from "react-native";
 import { View, Text } from "react-native";
 
-const AddAccount = () => {
+const AddAccount = ({navigation}) => {
   return (
     <View>
       <View

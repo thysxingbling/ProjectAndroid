@@ -13,7 +13,7 @@ import { SettingOutlined , UserSwitchOutlined ,CustomerServiceTwoTone , RightOut
     ,SearchOutlined, LockOutlined ,PieChartOutlined,CloudOutlined ,QrcodeOutlined,AppstoreOutlined,MessageOutlined,
     ContactsOutlined,UserOutlined,ClockCircleOutlined,PropertySafetyOutlined,SoundOutlined,PhoneOutlined,ToolOutlined,InfoCircleOutlined
      ,QuestionCircleOutlined,LogoutOutlined,ArrowLeftOutlined} from '@ant-design/icons';
-import { AntDesign} from '@expo/vector-icons';
+
 
    const Settings = ({navigation})=>{
         return(
@@ -29,7 +29,7 @@ import { AntDesign} from '@expo/vector-icons';
                     }>
                          <Text style={styles.txtS}>Cài đặt</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnSetting} onPress={()=>navigation.navigate('information')}>
+                    <TouchableOpacity style={styles.btnSetting} onPress={()=>navigation.navigate('Profile')}>
                       <ArrowLeftOutlined style={{fontSize:'30px' , color:'#fff'}}/>
                     </TouchableOpacity>
                   </View> 
@@ -216,7 +216,7 @@ import { AntDesign} from '@expo/vector-icons';
         width: "100%",
         height: "100%",
         overflow: "hidden",
-        // justifyContent: "center",
+ 
       },
       text:{
         fontSize:80,
