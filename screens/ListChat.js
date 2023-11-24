@@ -146,7 +146,9 @@ const ListChat = ({ navigation }) => {
           <AppstoreOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>{
+          navigation.navigate("Diary");
+        }}>
           <ClockCircleOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 

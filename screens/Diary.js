@@ -272,27 +272,44 @@ var url = "https://654da848cbc325355741c2bd.mockapi.io/phoneBook";
             </ScrollView>
            
            {/* footer */}
-        <View style={{ flex: 1, backgroundColor: "#fff", justifyContent:"space-around",flexDirection:"row" }}>
-        <TouchableOpacity>
-          <MessageOutlined style={{color:"#b0a7a7",fontSize:25,marginTop:20}}/>
+           <View
+        style={{
+          backgroundColor: "faefef",
+          justifyContent: "space-around",
+          flexDirection: "row",
+          flex: 1,
+        }}
+      >
+        <TouchableOpacity    onPress={() => {
+            navigation.navigate("ListChat");
+          }}>
+          <MessageOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Contact");
+          }}
+        >
+          <ContactsOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 
         <TouchableOpacity>
-        <ContactsOutlined style={{color:"#b0a7a7",fontSize:25,marginTop:20}}/>
+          <AppstoreOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 
-        <TouchableOpacity>
-          <AppstoreOutlined style={{color:"#b0a7a7",fontSize:25,marginTop:20}} />
+        <TouchableOpacity onPress={()=>{
+          navigation.navigate("Diary");
+        }}>
+          <ClockCircleOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 
-        <TouchableOpacity>
-        <ClockCircleOutlined style={{color:"#b0a7a7",fontSize:25,marginTop:20}}/>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={
-            ()=> navigation.navigate('information')
-        }>
-        <UserOutlined style={{color:"#b0a7a7",fontSize:25,marginTop:20}}/>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Profile");
+          }}
+        >
+          <UserOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
       </View>
      </SafeAreaView>

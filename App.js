@@ -9,6 +9,9 @@ import Profile from "./screens/Profile";
 import Contact from "./screens/Contact";
 import { Chat } from "./screens/Chat";
 import Diary from "./screens/Diary";
+import AddFriend from "./screens/AddFriend";
+import Settings from "./screens/Settings";
+import AddAccount from "./screens/AddAccount";
 
 function App() {
   const Stack = createStackNavigator();
@@ -16,21 +19,22 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="Home"
-        screenOptions={{ headerShown: false }}
-      >
-        {/* <Stack.Screen
+        screenOptions={{ headerShown: false }}>
+        <Stack.Screen
           name="Home"
           component={Home}
-          options={{ headerShown: false }}
-        ></Stack.Screen> */}
-         {/* <Stack.Screen name="Login" component={Login}></Stack.Screen>
+          options={{ headerShown: false }}></Stack.Screen>
+         <Stack.Screen name="Login" component={Login}></Stack.Screen>
         <Stack.Screen name="Register" component={Register}></Stack.Screen>
-        <Stack.Screen name="CreateAccount"></Stack.Screen>
+        <Stack.Screen name="CreateAccount" component={CreateAccount}></Stack.Screen>
         <Stack.Screen name="ListChat" component={ListChat}></Stack.Screen>
         <Stack.Screen name="Profile" component={Profile}></Stack.Screen>
-        <Stack.Screen name="Contact" component={Contact}></Stack.Screen> */}
+        <Stack.Screen name="Contact" component={Contact}></Stack.Screen>
         <Stack.Screen name="Chat" component={Chat}></Stack.Screen> 
-        {/* <Stack.Screen name="Diary" component={Diary}></Stack.Screen> */}
+        <Stack.Screen name="Diary" component={Diary}></Stack.Screen>
+        <Stack.Screen name="AddFriend" component={AddFriend}></Stack.Screen>
+        <Stack.Screen name="Settings" component={Settings}></Stack.Screen>
+        <Stack.Screen name="AddAccount" component={AddAccount}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

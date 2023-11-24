@@ -60,7 +60,9 @@ export const Chat = ({ navigation, route }) => {
             navigation.goBack("Home");
           }}
         >
+          
           <AntDesign name="arrowleft" size={30} color="white"></AntDesign>
+          <Text style={{marginLeft:10,fontSize:18,fontWeight:500,color:"white"}}> {data.name}</Text>
         </Pressable>
         <Text style={{ width: "60%", height: "100%" }}></Text>
 

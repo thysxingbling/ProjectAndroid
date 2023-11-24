@@ -25,7 +25,9 @@ import { AntDesign} from '@expo/vector-icons';
                     }>
                          <Text style={styles.txtS}>Tìm kiếm</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnSetting}>
+                    <TouchableOpacity style={styles.btnSetting} onPress={()=>{
+                        navigation.navigate("Settings");
+                    }}>
                       <SettingOutlined style={{fontSize:'30px' , color:'#fff'}}/>
                     </TouchableOpacity>
                   </View> 

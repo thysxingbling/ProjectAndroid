@@ -2,7 +2,8 @@ import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import { Pressable } from "react-native";
-import { View, Text, TouchableOpacity, Image, FlatList } from "react-native";
+import { View, Text, TouchableOpacity, Image, FlatList , TextInput} from "react-native";
+import{CheckSquareOutlined} from '@ant-design/icons'
 
 const arr = [
   {
@@ -75,70 +76,30 @@ function Register(props) {
         </Text>
       </View>
       <View style={{ flex: 9, backgroundColor: "#ffff" }}>
-        <TouchableOpacity
-          style={{
-            width: "20%",
-            height: 50,
-            borderBottomWidth:"1px",
-            justifyContent: "center",
-            alignItems: "center",
-            marginLeft: 10,
-          }}
-          onPress={() => {
-            setIsClicked(!isClicked);
-          }}
-        >
-          <Text>{setSelected}</Text>
-          {isClicked ? (
-            <Image
-              source={require("../assets/upload.png")}
-              style={{
-                width: 15,
-                height: 15,
-                justifyContent: "flex-end",
-                alignItems: "center",
-                marginLeft: 50,
-              }}
-            />
-          ) : (
-            <Image
-              source={require("../assets/dropdown.png")}
-              style={{
-                width: 20,
-                height: 20,
-                justifyContent: "flex-end",
-                alignItems: "center",
-                marginLeft: 50,
-              }}
-            />
-          )}
-        </TouchableOpacity>
-        {isClicked ? (
-          <View
-            style={{
-              width: "20%",
-              height: 80,
-              borderRadius: "5px",
-              borderWidth: "1px",
-            }}
-          >
-            <FlatList
-              data={data}
-              renderItem={({ item, index }) => {
-                return (
-                  <TouchableOpacity
-                    onPress={() => {
-                      setSelected(item.label);
-                      setIsClicked(false);
-                    }}
-                  >
-                    <Text>{item.label}</Text>
-                  </TouchableOpacity>
-                );
-              }}
-            ></FlatList>
-          </View>
-        ) : null}
+      <View style={{
+                    flexDirection:'row',
+                    alignItems:'center',
+                    height:50,
+                    borderBottomColor:' #e6f9fd',
+                    borderBottomWidth:'1px',
+                    width : '95%',
+                    marginLeft:'10px',
+                }}>
+                    <Text style={{
+                        color:'rgb(155,207,207)',
+                        width:'10%',
+                        marginLeft:'10px'
+                    }}>VN</Text>
+
+                    <TextInput style={{
+                        borderColor:'#fff',
+                        borderBlockColor:'#fff',
+                        width:'80%',
+                        height:'44px',
+                        fontSize:20,
+                       
+                    }} placeholderTextColor={'#dbdee0'} placeholder='Nhập số điện thoại'></TextInput>
+                </View>
       </View>
       <View
         style={{

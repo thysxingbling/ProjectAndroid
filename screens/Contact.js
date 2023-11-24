@@ -40,7 +40,9 @@ var url =  "https://6554d45e63cafc694fe70d65.mockapi.io/api/phoneBooks";
                     }>
                          <Text style={styles.txtS}>Tìm kiếm</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnicon}>
+                    <TouchableOpacity style={styles.btnicon}   onPress={()=>{
+                        navigation.navigate("AddFriend");
+                    }} >
                         <UserAddOutlined style={{color:'#fff', fontSize:30}}/>
                     </TouchableOpacity>
                     
@@ -109,7 +111,9 @@ var url =  "https://6554d45e63cafc694fe70d65.mockapi.io/api/phoneBooks";
                   <View style={{
                     flex:2,
                   }}>
-                    <TouchableOpacity style={{
+                    <TouchableOpacity
+                  
+                     style={{
                         flexDirection:'row',
                         backgroundColor:'#fff',
                         padding:5,
@@ -267,27 +271,47 @@ var url =  "https://6554d45e63cafc694fe70d65.mockapi.io/api/phoneBooks";
         );
       })} 
     </ScrollView>
-<View style={{ flex: 1, backgroundColor: "#fff", justifyContent:"space-around",flexDirection:"row",height:'55px' }}>
-        <TouchableOpacity>
-          <MessageOutlined style={{color:"#b0a7a7",fontSize:25,marginTop:20}}/>
+    {/* footer */}
+    <View
+        style={{
+          backgroundColor: "faefef",
+          justifyContent: "space-around",
+          flexDirection: "row",
+          flex: 1,
+        }}
+      >
+        <TouchableOpacity    onPress={() => {
+            navigation.navigate("ListChat");
+          }}>
+          <MessageOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Contact");
+          }}
+        >
+          <ContactsOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 
         <TouchableOpacity>
-        <ContactsOutlined style={{color:"#b0a7a7",fontSize:25,marginTop:20}}/>
+          <AppstoreOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 
-        <TouchableOpacity>
-          <AppstoreOutlined style={{color:"#b0a7a7",fontSize:25,marginTop:20}} />
+        <TouchableOpacity onPress={()=>{
+          navigation.navigate("Diary");
+        }}>
+          <ClockCircleOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
 
-        <TouchableOpacity>
-        <ClockCircleOutlined style={{color:"#b0a7a7",fontSize:25,marginTop:20}}/>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Profile");
+          }}
+        >
+          <UserOutlined style={{ color: "#b0a7a7", fontSize: 25 }} />
         </TouchableOpacity>
-
-        <TouchableOpacity>
-        <UserOutlined style={{color:"#b0a7a7",fontSize:25,marginTop:20}}/>
-        </TouchableOpacity>
-</View>
+      </View>
      </SafeAreaView>
      
         );
