@@ -1,4 +1,4 @@
-/* màn hình 1  bao gồm : đăng nhập , đăng ký , quên mật khẩu*/
+
 import * as React from 'react' ;
 import { 
     SafeAreaView,
@@ -7,8 +7,7 @@ import {
     Image,
     TouchableOpacity,
     StyleSheet,
-    FlatList,
-    StatusBar,ScrollView
+   ,ScrollView
    } from 'react-native';
 import { TextInput } from 'react-native-paper';
           
