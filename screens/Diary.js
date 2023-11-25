@@ -71,7 +71,7 @@ var url = "https://654da848cbc325355741c2bd.mockapi.io/phoneBook";
                         width:'50px',
                         height:'50px',
                     }}
-                    source={require('../assets/avatar.png')}/>
+                    source={require('../assets/img_1.png')}/>
                 <Text style={{
                     fontSize:'16px',
                     marginLeft:'10px',

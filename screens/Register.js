@@ -32,8 +32,6 @@ const arr = [
   },
 ];
 function Register(props) {
-  // const [selected, setSelected] = useState("Select");
-  // const [isClicked, setIsClicked] = useState(false);
   const [data, setData] = useState(arr);
   var navigation = useNavigation();
   return (

@@ -34,7 +34,7 @@ import { AntDesign} from '@expo/vector-icons';
                   <View style={styles.group_list}>
                         <View style={styles.view_imp}>
                             <TouchableOpacity style={styles.btnImp}>
-                                <Image style={styles.img_avt} source={require('../assets/avatar.png')}/>
+                                <Image style={styles.img_avt} source={require('../assets/img_1.png')}/>
                                 <View style={styles.view_avt}>
                                 <Text style={{fontWeight:500}}>
                                     Avatar  

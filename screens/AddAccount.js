@@ -1,11 +1,11 @@
 import { PlusCircleOutlined } from "@ant-design/icons";
 import { AntDesign } from "@expo/vector-icons";
 import React from "react";
-import { Image } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 import { Pressable } from "react-native";
 import { View, Text } from "react-native";
 
-const AddAccount = ({navigation}) => {
+const AddAccount = ({ navigation }) => {
   return (
     <View>
       <View
@@ -84,18 +84,25 @@ const AddAccount = ({navigation}) => {
         </Text>
       </View>
       <View style={{ backgroundColor: "white", flexDirection: "row" }}>
-        <PlusCircleOutlined style={{margin:10,fontSize:50,color:"#0091ff"}} />
-
+        <TouchableOpacity onPress={()=>{
+          navigation.navigate("Model_AddAccount");
+        }}>
+          {" "}
+          <PlusCircleOutlined
+            style={{ margin: 10, fontSize: 50, color: "#0091ff" }}
+          />
+          
+        </TouchableOpacity>
         <Text
-          style={{
-            fontSize: 15,
-            fontWeight: 500,
-            marginTop: 20,
-            marginLeft: 10,
-          }}
-        >
-          Thêm tài khoản
-        </Text>
+            style={{
+              fontSize: 15,
+              fontWeight: 500,
+              marginTop: 20,
+              marginLeft: 10,
+            }}
+          >
+            Thêm tài khoản
+          </Text>
       </View>
     </View>
   );
