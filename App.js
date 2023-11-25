@@ -21,7 +21,7 @@ function App() {
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={{ headerShown: false }}>
-        {/* <Stack.Screen
+        <Stack.Screen
           name="Home"
           component={Home}
           options={{ headerShown: false }}></Stack.Screen>
@@ -34,7 +34,7 @@ function App() {
         <Stack.Screen name="Chat" component={Chat}></Stack.Screen> 
         <Stack.Screen name="Diary" component={Diary}></Stack.Screen>
         <Stack.Screen name="AddFriend" component={AddFriend}></Stack.Screen>
-        <Stack.Screen name="Settings" component={Settings}></Stack.Screen>  */}
+        <Stack.Screen name="Settings" component={Settings}></Stack.Screen> 
         <Stack.Screen name="AddAccount" component={AddAccount}></Stack.Screen>
         <Stack.Screen name="Model_AddAccount" component={Model_AddAccount}></Stack.Screen>
       </Stack.Navigator>
