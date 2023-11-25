@@ -44,7 +44,9 @@ import { AntDesign} from '@expo/vector-icons';
                                     Xem trang cá nhân 
                                 </Text>
                                 </View>
-                                <TouchableOpacity>
+                                <TouchableOpacity onPress={() =>{
+                                    navigation.navigate("AddAccount");
+                                }}>
                                      <UserSwitchOutlined style={{fontSize:'30px' , color:'#157ef9'}}/>
                                 </TouchableOpacity>
                             </TouchableOpacity>

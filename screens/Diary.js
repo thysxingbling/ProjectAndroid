@@ -192,7 +192,7 @@ var url = "https://654da848cbc325355741c2bd.mockapi.io/phoneBook";
                             width:'50px',
                             height:'50px',
                             borderRadius:'25px',
-                          }} source={item.avt}/>
+                          }} source={item.image}/>
                           <View style={{
                             flexDirection:'row',
                           }}>
@@ -224,7 +224,7 @@ var url = "https://654da848cbc325355741c2bd.mockapi.io/phoneBook";
                                 width:'400px',
                                 height:'300px',        
                                 resizeMode:'contain',   
-                            }} source={item.image}/>
+                            }} source={item.avt}/>
 
                            </View>
                         <View style={{

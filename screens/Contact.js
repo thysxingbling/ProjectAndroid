@@ -212,6 +212,9 @@ var url =  "https://6554d45e63cafc694fe70d65.mockapi.io/api/phoneBooks";
         return (
             
           <TouchableOpacity
+          onPress={()=>{
+            navigation.navigate("Chat");
+          }}
             style={{
               flexDirection: "row",
                 padding:10,

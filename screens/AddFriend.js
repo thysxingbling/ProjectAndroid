@@ -158,7 +158,11 @@ const AddFriend = ({navigation}) => {
             borderColor: "#d5d3da",
           }}
         >
-          <TouchableOpacity style={{ flexDirection: "row", padding: "15px" }}>
+          <TouchableOpacity 
+          onPress={()=>{
+            navigation.navigate("Contact");
+          }}
+          style={{ flexDirection: "row", padding: "15px" }}>
          
             <SolutionOutlined
               style={{ fontSize: 25, color: "#129EFD"}}
